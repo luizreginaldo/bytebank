@@ -1,23 +1,32 @@
 fun main() {
     println("Bem vindo ao Bytebank")
 
-    val bankAccountLuiz = BankAccount()
-    bankAccountLuiz.holder = "Luiz Reginaldo"
-    bankAccountLuiz.number = 1000
-    bankAccountLuiz.balance = 500.0
-    deposit(bankAccountLuiz, 50.0)
+    val bankAccount = BankAccount()
+    bankAccount.holder = "Luiz Reginaldo"
+    bankAccount.number = 1000
+    bankAccount.balance = 500.0
 
-    println(bankAccountLuiz.balance)
-}
+    bankAccount.deposit(50.0)
+    println(bankAccount.balance)
 
-fun deposit(bankAccount: BankAccount, ammount: Double) {
-    bankAccount.balance += ammount
+    bankAccount.withdraw(100.0)
+    println(bankAccount.balance)
 }
 
 class BankAccount {
     var holder = ""
     var number = 0
     var balance = 0.0
+
+    fun deposit(amount: Double) {
+        balance += amount
+    }
+
+    fun withdraw(amount: Double) {
+        if (balance >= amount) {
+            balance -= amount
+        }
+    }
 }
 
 fun forLoopTest() {
