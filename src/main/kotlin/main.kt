@@ -1,7 +1,17 @@
 fun main() {
     println("Bem vindo ao Bytebank")
 
-    forLoopTest()
+    val bankAccountLuiz = BankAccount()
+    bankAccountLuiz.holder = "Luiz Reginaldo"
+    bankAccountLuiz.number = 1000
+    bankAccountLuiz.balance = 500.0
+    deposit(bankAccountLuiz, 50.0)
+
+    println(bankAccountLuiz.balance)
+}
+
+fun deposit(bankAccount: BankAccount, ammount: Double) {
+    bankAccount.balance += ammount
 }
 
 class BankAccount {
