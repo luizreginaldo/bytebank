@@ -10,4 +10,18 @@ fun main() {
     println("Titular: $holder")
     println("Número da Conta: $accountNumber")
     println("Saldo: $balance")
+
+//    if (balance > 0.0) {
+//        println("Conta é positiva")
+//    } else if (balance == 0.0) {
+//        println("Conta é neutra")
+//    } else {
+//        println("Conta é negativa")
+//    }
+
+    when {
+        balance > 0.0 -> println("Conta é positiva")
+        balance == 0.0 -> println("Conta é neutra")
+        else -> println("Conta é negativa")
+    }
 }
