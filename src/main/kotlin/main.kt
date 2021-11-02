@@ -1,5 +1,13 @@
 fun main() {
     println("Bem vindo ao Bytebank")
+
+    forLoopTest()
+}
+
+class BankAccount {
+    var holder = ""
+    var number = 0
+    var balance = 0.0
 }
 
 fun forLoopTest() {
@@ -31,17 +39,18 @@ fun forLoopTest() {
 }
 
 fun printAccountData(value: Int) {
-    val holder: String = "Customer $value"
-    val accountNumber: Int = 1000 + value
-    var balance = value + 10.0
-    balance += 100 + 2.0
-    balance += 200
+    val bankAccount = BankAccount()
+    bankAccount.holder = "Customer $value"
+    bankAccount.number = 1000 + value
+    bankAccount.balance = 10.0 + value
+    bankAccount.balance += 100 + 2.0
+    bankAccount.balance += 200
 
-    println("Titular: $holder")
-    println("Número da Conta: $accountNumber")
-    println("Saldo: $balance")
+    println("Titular: ${bankAccount.holder}")
+    println("Número da Conta: ${bankAccount.number}")
+    println("Saldo: ${bankAccount.balance}")
 
-    conditionsTest(balance)
+    conditionsTest(bankAccount.balance)
 
     println("----------------------------")
 }
