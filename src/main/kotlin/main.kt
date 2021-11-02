@@ -1,16 +1,28 @@
 fun main() {
     println("Bem vindo ao Bytebank")
 
-    val bankAccount = BankAccount()
-    bankAccount.holder = "Luiz Reginaldo"
-    bankAccount.number = 1000
-    bankAccount.balance = 500.0
+    val bankAccountA = BankAccount()
+    bankAccountA.holder = "Luiz Reginaldo"
+    bankAccountA.number = 1000
+    bankAccountA.balance = 500.0
 
-    bankAccount.deposit(50.0)
-    println(bankAccount.balance)
+    val bankAccountB = BankAccount()
+    bankAccountB.holder = "Luiz Reginaldo"
+    bankAccountB.number = 1000
+    bankAccountB.balance = 500.0
 
-    bankAccount.withdraw(100.0)
-    println(bankAccount.balance)
+    bankAccountA.deposit(50.0)
+    println("bankAccountA ${bankAccountA.balance}")
+
+    bankAccountA.withdraw(100.0)
+    println("bankAccountA ${bankAccountA.balance}")
+
+    println("bankAccountB ${bankAccountB.balance}")
+
+    bankAccountA.transferTo(bankAccountB, 50.0)
+
+    println("bankAccountA ${bankAccountA.balance}")
+    println("bankAccountB ${bankAccountB.balance}")
 }
 
 class BankAccount {
@@ -22,10 +34,24 @@ class BankAccount {
         balance += amount
     }
 
-    fun withdraw(amount: Double) {
+    fun withdraw(amount: Double): Boolean {
         if (balance >= amount) {
             balance -= amount
+
+            return true
         }
+
+        return false
+    }
+
+    fun transferTo(bankAccount: BankAccount, amount: Double): Boolean {
+        if (withdraw(amount)) {
+            bankAccount.deposit(amount)
+
+            return true
+        }
+
+        return false
     }
 }
 
