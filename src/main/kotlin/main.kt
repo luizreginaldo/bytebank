@@ -1,15 +1,11 @@
 fun main() {
     println("Bem vindo ao Bytebank")
 
-    val bankAccountA = BankAccount()
-    bankAccountA.holder = "Luiz Reginaldo"
-    bankAccountA.number = 1000
+    val bankAccountA = BankAccount("Luiz", 1001)
     bankAccountA.deposit(500.0)
 
-    val bankAccountB = BankAccount()
-    bankAccountB.holder = "Luiz Reginaldo"
-    bankAccountB.number = 1000
-    bankAccountB.deposit(500.0)
+    val bankAccountB = BankAccount("Reginaldo", 1002)
+    bankAccountB.deposit(700.0)
 
     bankAccountA.deposit(50.0)
     println("bankAccountA ${bankAccountA.balance}")
@@ -25,9 +21,10 @@ fun main() {
     println("bankAccountB ${bankAccountB.balance}")
 }
 
-class BankAccount {
-    var holder = ""
-    var number = 0
+class BankAccount(
+    var holder: String,
+    var number: Int
+) {
     var balance = 0.0
         private set(value) {
             field = if (value > 0) value else 0.0
