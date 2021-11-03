@@ -8,7 +8,7 @@ fun main() {
     )
 
     println("Name: ${employee.name}")
-    println("CPF: ${employee.documentNumber}")
+    println("Document: ${employee.documentNumber}")
     println("Wage: ${employee.wage}")
     println("Wage Bonus: ${employee.wageBonus()}")
 
@@ -21,11 +21,32 @@ fun main() {
 
     println()
     println("Name: ${manager.name}")
-    println("CPF: ${manager.documentNumber}")
+    println("Document: ${manager.documentNumber}")
     println("Wage: ${manager.wage}")
     println("Wage Bonus: ${manager.wageBonus()}")
 
     if(manager.auth(1234)) {
+        println("auth success")
+    } else {
+        println("auth error")
+    }
+
+    val director = Director(
+        "Director Name",
+        "12345678900",
+        3000.0,
+        4321,
+        200.0
+    )
+
+    println()
+    println("Name: ${director.name}")
+    println("Document: ${director.documentNumber}")
+    println("Wage: ${director.wage}")
+    println("Wage Bonus: ${director.wageBonus()}")
+    println("Profit Sharing: ${director.profitSharing}")
+
+    if(director.auth(1234)) {
         println("auth success")
     } else {
         println("auth error")
