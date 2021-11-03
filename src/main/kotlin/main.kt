@@ -4,7 +4,8 @@ fun main() {
     val employee = Employee(
         "Luiz Reginaldo",
         "12345678900",
-        1000.0
+        1000.0,
+        0
     )
 
     println("Name: ${employee.name}")
