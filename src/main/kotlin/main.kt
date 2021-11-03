@@ -52,10 +52,24 @@ fun main() {
         println("auth error")
     }
 
-    var calculator = WageBonusCalculator()
+    val analyst = Analyst(
+        "Analyst Name",
+        "12345678900",
+        3000.0
+    )
+
+    println()
+    println("Name: ${analyst.name}")
+    println("Document: ${analyst.documentNumber}")
+    println("Wage: ${analyst.wage}")
+    println("Wage Bonus: ${analyst.wageBonus}")
+
+    val calculator = WageBonusCalculator()
     calculator.register(employee)
     calculator.register(manager)
     calculator.register(director)
+    calculator.register(analyst)
 
+    println()
     println("Total: ${calculator.total}")
 }
