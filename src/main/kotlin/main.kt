@@ -10,7 +10,7 @@ fun main() {
     println("Name: ${employee.name}")
     println("Document: ${employee.documentNumber}")
     println("Wage: ${employee.wage}")
-    println("Wage Bonus: ${employee.wageBonus()}")
+    println("Wage Bonus: ${employee.wageBonus}")
 
     val manager = Manager(
         "Manager Name",
@@ -23,7 +23,7 @@ fun main() {
     println("Name: ${manager.name}")
     println("Document: ${manager.documentNumber}")
     println("Wage: ${manager.wage}")
-    println("Wage Bonus: ${manager.wageBonus()}")
+    println("Wage Bonus: ${manager.wageBonus}")
 
     if(manager.auth(1234)) {
         println("auth success")
@@ -43,7 +43,7 @@ fun main() {
     println("Name: ${director.name}")
     println("Document: ${director.documentNumber}")
     println("Wage: ${director.wage}")
-    println("Wage Bonus: ${director.wageBonus()}")
+    println("Wage Bonus: ${director.wageBonus}")
     println("Profit Sharing: ${director.profitSharing}")
 
     if(director.auth(1234)) {

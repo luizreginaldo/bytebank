@@ -9,9 +9,10 @@ class Director(
     documentNumber = documentNumber,
     wage = wage
 ) {
-    override fun wageBonus(): Double {
-        return wage * 0.3
-    }
+    override val wageBonus: Double
+        get() {
+            return wage * 0.3
+        }
 
     fun auth(password: Int): Boolean {
         if(this.password == password) {

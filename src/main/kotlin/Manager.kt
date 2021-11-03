@@ -8,9 +8,10 @@ class Manager(
     documentNumber = documentNumber,
     wage = wage
 ) {
-    override fun wageBonus(): Double {
-        return wage * 0.2
-    }
+    override val wageBonus: Double
+        get() {
+            return wage * 0.2
+        }
 
     fun auth(password: Int): Boolean {
         if(this.password == password) {
