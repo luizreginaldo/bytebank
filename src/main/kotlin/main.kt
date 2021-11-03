@@ -51,4 +51,11 @@ fun main() {
     } else {
         println("auth error")
     }
+
+    var calculator = WageBonusCalculator()
+    calculator.register(employee)
+    calculator.register(manager)
+    calculator.register(director)
+
+    println("Total: ${calculator.total}")
 }
