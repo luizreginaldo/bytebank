@@ -2,57 +2,36 @@ fun main() {
     println("Bem vindo ao Bytebank")
 
     val bankAccountA = BankAccount()
-    bankAccountA.setHolder("Luiz Reginaldo")
-    bankAccountA.setNumber(1000)
-    bankAccountA.setBalance(500.0)
+    bankAccountA.holder = "Luiz Reginaldo"
+    bankAccountA.number = 1000
+    bankAccountA.deposit(500.0)
 
     val bankAccountB = BankAccount()
-    bankAccountB.setHolder("Luiz Reginaldo")
-    bankAccountB.setNumber(1000)
-    bankAccountB.setBalance(500.0)
+    bankAccountB.holder = "Luiz Reginaldo"
+    bankAccountB.number = 1000
+    bankAccountB.deposit(500.0)
 
     bankAccountA.deposit(50.0)
-    println("bankAccountA ${bankAccountA.getBalance()}")
+    println("bankAccountA ${bankAccountA.balance}")
 
     bankAccountA.withdraw(100.0)
-    println("bankAccountA ${bankAccountA.getBalance()}")
+    println("bankAccountA ${bankAccountA.balance}")
 
-    println("bankAccountB ${bankAccountB.getBalance()}")
+    println("bankAccountB ${bankAccountB.balance}")
 
     bankAccountA.transferTo(bankAccountB, 50.0)
 
-    println("bankAccountA ${bankAccountA.getBalance()}")
-    println("bankAccountB ${bankAccountB.getBalance()}")
+    println("bankAccountA ${bankAccountA.balance}")
+    println("bankAccountB ${bankAccountB.balance}")
 }
 
 class BankAccount {
-    private var holder = ""
-    private var number = 0
-    private var balance = 0.0
-
-    fun getHolder(): String {
-        return holder
-    }
-
-    fun getNumber(): Int {
-        return number
-    }
-
-    fun getBalance(): Double {
-        return balance
-    }
-
-    fun setHolder(holder: String) {
-        this.holder = holder
-    }
-
-    fun setNumber(number: Int) {
-        this.number = number
-    }
-
-    fun setBalance(balance: Double) {
-        this.balance = balance
-    }
+    var holder = ""
+    var number = 0
+    var balance = 0.0
+        private set(value) {
+            field = if (value > 0) value else 0.0
+        }
 
     fun deposit(amount: Double) {
         balance += amount
