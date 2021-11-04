@@ -1,0 +1,13 @@
+class CheckingAccount(
+    holder: String,
+    number: Int
+) : BankAccount(
+    holder = holder,
+    number = number
+) {
+    override fun withdraw(amount: Double): Boolean {
+        val amountWithFee = amount + .1
+
+        return super.withdraw(amountWithFee)
+    }
+}

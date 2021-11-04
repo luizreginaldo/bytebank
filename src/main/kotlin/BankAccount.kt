@@ -1,4 +1,4 @@
-class BankAccount(
+open class BankAccount(
     var holder: String,
     val number: Int
 ) {
@@ -11,7 +11,7 @@ class BankAccount(
         balance += amount
     }
 
-    fun withdraw(amount: Double): Boolean {
+    open fun withdraw(amount: Double): Boolean {
         if (balance >= amount) {
             balance -= amount
 
