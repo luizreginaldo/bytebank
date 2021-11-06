@@ -1,9 +1,9 @@
-open class BankAccount(
+abstract class BankAccount(
     var holder: String,
     val number: Int
 ) {
     var balance = 0.0
-        private set(value) {
+        protected set(value) {
             field = if (value > 0) value else 0.0
         }
 
@@ -11,15 +11,7 @@ open class BankAccount(
         balance += amount
     }
 
-    open fun withdraw(amount: Double): Boolean {
-        if (balance >= amount) {
-            balance -= amount
-
-            return true
-        }
-
-        return false
-    }
+    abstract fun withdraw(amount: Double): Boolean
 
     fun transferTo(bankAccount: BankAccount, amount: Double): Boolean {
         if (withdraw(amount)) {

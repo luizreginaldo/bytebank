@@ -8,6 +8,12 @@ class CheckingAccount(
     override fun withdraw(amount: Double): Boolean {
         val amountWithFee = amount + .1
 
-        return super.withdraw(amountWithFee)
+        if (balance >= amountWithFee) {
+            balance -= amountWithFee
+
+            return true
+        }
+
+        return false
     }
 }

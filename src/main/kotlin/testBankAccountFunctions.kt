@@ -1,8 +1,8 @@
 fun testBankAccountFunctions() {
-    val bankAccountA = BankAccount(holder = "Luiz", number = 1001)
+    val bankAccountA = CheckingAccount(holder = "Luiz", number = 1001)
     bankAccountA.deposit(amount = 500.0)
 
-    val bankAccountB = BankAccount(number = 1002, holder = "Reginaldo")
+    val bankAccountB = SavingAccount(number = 1002, holder = "Reginaldo")
     bankAccountB.deposit(700.0)
 
     bankAccountA.deposit(50.0)
