@@ -3,5 +3,5 @@ abstract class Employee(
     val documentNumber: String,
     val wage: Double
 ) {
-    open val wageBonus: Double get() = wage * 0.1
+    abstract val wageBonus: Double
 }
