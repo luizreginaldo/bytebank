@@ -1,4 +1,4 @@
-open class Employee(
+abstract class Employee(
     val name: String,
     val documentNumber: String,
     val wage: Double

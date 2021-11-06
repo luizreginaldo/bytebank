@@ -1,15 +1,4 @@
 fun testEmployees() {
-    val employee = Employee(
-        "Employee Name",
-        "12345678900",
-        1000.0
-    )
-
-    println("Name: ${employee.name}")
-    println("Document: ${employee.documentNumber}")
-    println("Wage: ${employee.wage}")
-    println("Wage Bonus: ${employee.wageBonus}")
-
     val manager = Manager(
         "Manager Name",
         "12345678900",
@@ -63,7 +52,6 @@ fun testEmployees() {
     println("Wage Bonus: ${analyst.wageBonus}")
 
     val calculator = WageBonusCalculator()
-    calculator.register(employee)
     calculator.register(manager)
     calculator.register(director)
     calculator.register(analyst)
