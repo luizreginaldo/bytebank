@@ -10,6 +10,7 @@ class Director(
     wage = wage,
     password = password
 ) {
+
     override val wageBonus: Double
         get() {
             return wage * 0.1 + wage + profitSharing

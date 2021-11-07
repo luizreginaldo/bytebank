@@ -15,9 +15,9 @@ fun testAuth() {
     )
 
     val customer = Customer(
-        "Siva",
-        "112.334.556-77",
-        123456
+        name = "Siva",
+        documentNumber = "112.334.556-77",
+        password = 123456
     )
 
     val intranet = Intranet()

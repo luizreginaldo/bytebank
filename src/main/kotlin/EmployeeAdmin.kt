@@ -2,7 +2,7 @@ abstract class EmployeeAdmin(
     name: String,
     documentNumber: String,
     wage: Double,
-    protected val password: Int
+    private val password: Int
 ) : Employee(
     name = name,
     documentNumber = documentNumber,
