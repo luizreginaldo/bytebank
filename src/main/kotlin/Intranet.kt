@@ -1,5 +1,5 @@
 class Intranet {
-    fun login(admin: EmployeeAdmin, password: Int) {
+    fun login(admin: Authenticable, password: Int) {
         if(admin.auth(password)) {
             println("Bem vindo ao Bytebank")
         } else {

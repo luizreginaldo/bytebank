@@ -7,8 +7,8 @@ abstract class EmployeeAdmin(
     name = name,
     documentNumber = documentNumber,
     wage = wage
-) {
-    fun auth(password: Int): Boolean {
+), Authenticable {
+    override fun auth(password: Int): Boolean {
         if(this.password == password) {
             return true
         }

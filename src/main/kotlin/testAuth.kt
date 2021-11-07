@@ -14,7 +14,14 @@ fun testAuth() {
         500.0
     )
 
+    val customer = Customer(
+        "Siva",
+        "112.334.556-77",
+        123456
+    )
+
     val intranet = Intranet()
     intranet.login(manager,123456)
     intranet.login(director,654521)
+    intranet.login(customer, 123456)
 }
