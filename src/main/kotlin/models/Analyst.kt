@@ -1,16 +1,16 @@
-class Manager(
+package models
+
+class Analyst(
     name: String,
     documentNumber: String,
-    wage: Double,
-    password: Int
-) : EmployeeAdmin(
+    wage: Double
+) : Employee(
     name = name,
     documentNumber = documentNumber,
-    wage = wage,
-    password = password
+    wage = wage
 ) {
     override val wageBonus: Double
         get() {
-            return wage * 0.1 + wage
+            return wage * 0.1
         }
 }

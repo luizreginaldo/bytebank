@@ -1,3 +1,8 @@
+package tests
+
+import models.CheckingAccount
+import models.SavingAccount
+
 fun testDifferentBankAccounts() {
     val checkingAccount = CheckingAccount(
         holder = "Luiz",

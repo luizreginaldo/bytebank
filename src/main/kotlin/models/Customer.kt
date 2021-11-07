@@ -1,3 +1,7 @@
+package models
+
+import models.Authenticable
+
 class Customer(
     val name: String,
     val documentNumber: String,

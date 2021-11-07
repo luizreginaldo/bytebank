@@ -1,3 +1,5 @@
+package models
+
 abstract class BankAccount(
     var holder: String,
     val number: Int

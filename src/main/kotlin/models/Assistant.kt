@@ -1,4 +1,8 @@
-class Analyst(
+package models
+
+import models.Employee
+
+class Assistant(
     name: String,
     documentNumber: String,
     wage: Double
@@ -8,7 +12,5 @@ class Analyst(
     wage = wage
 ) {
     override val wageBonus: Double
-        get() {
-            return wage * 0.1
-        }
+        get() = wage * .05
 }

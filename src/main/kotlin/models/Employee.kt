@@ -1,3 +1,5 @@
+package models
+
 abstract class Employee(
     val name: String,
     val documentNumber: String,

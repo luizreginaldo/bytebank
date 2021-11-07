@@ -1,3 +1,7 @@
+package models
+
+import models.Employee
+
 class WageBonusCalculator {
     var total: Double = 0.0
         private set

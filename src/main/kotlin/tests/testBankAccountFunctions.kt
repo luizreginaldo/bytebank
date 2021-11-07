@@ -1,3 +1,8 @@
+package tests
+
+import models.CheckingAccount
+import models.SavingAccount
+
 fun testBankAccountFunctions() {
     val bankAccountA = CheckingAccount(holder = "Luiz", number = 1001)
     bankAccountA.deposit(amount = 500.0)

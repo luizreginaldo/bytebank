@@ -1,3 +1,8 @@
+package models
+
+import models.Authenticable
+import models.Employee
+
 abstract class EmployeeAdmin(
     name: String,
     documentNumber: String,

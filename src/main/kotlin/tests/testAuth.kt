@@ -1,3 +1,10 @@
+package tests
+
+import models.Customer
+import models.Director
+import models.Intranet
+import models.Manager
+
 fun testAuth() {
     val manager = Manager(
         "Luiz",

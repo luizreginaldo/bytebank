@@ -1,6 +1,13 @@
+package tests
+
+import models.Analyst
+import models.Director
+import models.Manager
+import models.WageBonusCalculator
+
 fun testEmployees() {
     val manager = Manager(
-        "Manager Name",
+        "models.Manager Name",
         "12345678900",
         2000.0,
         1234
@@ -19,7 +26,7 @@ fun testEmployees() {
     }
 
     val director = Director(
-        "Director Name",
+        "models.Director Name",
         "12345678900",
         3000.0,
         4321,
@@ -40,7 +47,7 @@ fun testEmployees() {
     }
 
     val analyst = Analyst(
-        "Analyst Name",
+        "models.Analyst Name",
         "12345678900",
         3000.0
     )
