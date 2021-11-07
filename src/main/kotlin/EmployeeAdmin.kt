@@ -1,11 +1,13 @@
 abstract class EmployeeAdmin(
-    val name: String,
-    val documentNumber: String,
-    val wage: Double,
+    name: String,
+    documentNumber: String,
+    wage: Double,
     protected val password: Int
+) : Employee(
+    name = name,
+    documentNumber = documentNumber,
+    wage = wage
 ) {
-    abstract val wageBonus: Double
-
     fun auth(password: Int): Boolean {
         if(this.password == password) {
             return true
