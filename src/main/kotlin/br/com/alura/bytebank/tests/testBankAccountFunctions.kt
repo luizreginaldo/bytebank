@@ -5,12 +5,12 @@ import br.com.alura.bytebank.models.Customer
 import br.com.alura.bytebank.models.SavingAccount
 
 fun testBankAccountFunctions() {
-    val customerA = Customer("Luiz", "123456789", 123456)
+    val customerA = Customer(name = "Luiz", documentNumber = "123456789", password = 123456)
 
     val bankAccountA = CheckingAccount(holder = customerA, number = 1001)
     bankAccountA.deposit(amount = 500.0)
 
-    val customerB = Customer("Reginaldo", "123456789", 123456)
+    val customerB = Customer(name = "Reginaldo", documentNumber = "123456789", password = 123456)
 
     val bankAccountB = SavingAccount(number = 1002, holder = customerB)
     bankAccountB.deposit(700.0)

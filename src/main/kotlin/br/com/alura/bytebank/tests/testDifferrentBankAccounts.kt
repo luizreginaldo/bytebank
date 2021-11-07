@@ -1,14 +1,23 @@
 package br.com.alura.bytebank.tests
 
+import br.com.alura.bytebank.models.Address
 import br.com.alura.bytebank.models.CheckingAccount
 import br.com.alura.bytebank.models.Customer
 import br.com.alura.bytebank.models.SavingAccount
 
 fun testDifferentBankAccounts() {
     val customerA = Customer(
-        "Luiz",
-        "987654321",
-        654321
+        name = "Luiz",
+        documentNumber = "987654321",
+        password = 654321,
+        address = Address(
+            address = "Rua A",
+            number = 123,
+            neighborhood = "Bairro ABC",
+            city = "Uberaba",
+            state = "MG",
+            zipCode = "23456-789"
+        )
     )
 
     val checkingAccount = CheckingAccount(
@@ -18,9 +27,9 @@ fun testDifferentBankAccounts() {
 
     val savingAccount = SavingAccount(
         holder = Customer(
-            "Reginaldo",
-            "123456789",
-            123456
+            name = "Reginaldo",
+            documentNumber = "123456789",
+            password = 123456
         ),
         number = 1001
     )
