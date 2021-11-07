@@ -1,16 +1,10 @@
 package br.com.alura.bytebank
 
-import br.com.alura.bytebank.models.BankAccount
-import br.com.alura.bytebank.models.Customer
-import br.com.alura.bytebank.models.SavingAccount
-import br.com.alura.bytebank.tests.testDifferentBankAccounts
+import br.com.alura.bytebank.models.Address
 
 fun main() {
-    val customer = Customer(name = "Luiz", documentNumber = "123456789", password = 123456)
-    val savingAccount = SavingAccount(holder = customer, number = 123)
-    val checkingAccount = SavingAccount(holder = customer, number = 123)
+    val address = Address(address = "Rua Cinco")
 
-    testDifferentBankAccounts()
-
-    println("Bank Account Total: ${BankAccount.total}")
+    println(address)
 }
+
