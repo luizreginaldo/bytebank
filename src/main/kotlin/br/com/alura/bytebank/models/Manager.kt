@@ -1,6 +1,4 @@
-package models
-
-import models.EmployeeAdmin
+package br.com.alura.bytebank.models
 
 class Manager(
     name: String,

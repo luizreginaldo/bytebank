@@ -1,6 +1,4 @@
-package models
-
-import models.Employee
+package br.com.alura.bytebank.models
 
 class WageBonusCalculator {
     var total: Double = 0.0

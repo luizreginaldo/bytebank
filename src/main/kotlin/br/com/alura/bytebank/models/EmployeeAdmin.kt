@@ -1,7 +1,4 @@
-package models
-
-import models.Authenticable
-import models.Employee
+package br.com.alura.bytebank.models
 
 abstract class EmployeeAdmin(
     name: String,

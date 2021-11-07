@@ -1,8 +1,6 @@
-package models
+package br.com.alura.bytebank.models
 
-import models.BankAccount
-
-class CheckingAccount(
+class SavingAccount(
     holder: String,
     number: Int
 ) : BankAccount(
@@ -10,10 +8,8 @@ class CheckingAccount(
     number = number
 ) {
     override fun withdraw(amount: Double): Boolean {
-        val amountWithFee = amount + .1
-
-        if (balance >= amountWithFee) {
-            balance -= amountWithFee
+        if (balance >= amount) {
+            balance -= amount
 
             return true
         }

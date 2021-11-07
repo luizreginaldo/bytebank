@@ -1,13 +1,10 @@
-package tests
+package br.com.alura.bytebank.tests
 
-import models.Analyst
-import models.Director
-import models.Manager
-import models.WageBonusCalculator
+import br.com.alura.bytebank.models.*
 
 fun testEmployees() {
     val manager = Manager(
-        "models.Manager Name",
+        "br.com.alura.bytebank.models.Manager Name",
         "12345678900",
         2000.0,
         1234
@@ -26,7 +23,7 @@ fun testEmployees() {
     }
 
     val director = Director(
-        "models.Director Name",
+        "br.com.alura.bytebank.models.Director Name",
         "12345678900",
         3000.0,
         4321,
@@ -47,7 +44,7 @@ fun testEmployees() {
     }
 
     val analyst = Analyst(
-        "models.Analyst Name",
+        "br.com.alura.bytebank.models.Analyst Name",
         "12345678900",
         3000.0
     )

@@ -1,7 +1,7 @@
-package tests
+package br.com.alura.bytebank.tests
 
-import models.CheckingAccount
-import models.SavingAccount
+import br.com.alura.bytebank.models.CheckingAccount
+import br.com.alura.bytebank.models.SavingAccount
 
 fun testDifferentBankAccounts() {
     val checkingAccount = CheckingAccount(

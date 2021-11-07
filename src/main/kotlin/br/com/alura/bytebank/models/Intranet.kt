@@ -1,6 +1,4 @@
-package models
-
-import models.Authenticable
+package br.com.alura.bytebank.models
 
 class Intranet {
     fun login(admin: Authenticable, password: Int) {

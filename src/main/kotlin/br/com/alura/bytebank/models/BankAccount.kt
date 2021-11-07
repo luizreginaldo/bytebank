@@ -1,4 +1,4 @@
-package models
+package br.com.alura.bytebank.models
 
 abstract class BankAccount(
     var holder: String,

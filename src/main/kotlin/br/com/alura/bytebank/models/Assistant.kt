@@ -1,6 +1,6 @@
-package models
+package br.com.alura.bytebank.models
 
-class Analyst(
+class Assistant(
     name: String,
     documentNumber: String,
     wage: Double
@@ -10,7 +10,5 @@ class Analyst(
     wage = wage
 ) {
     override val wageBonus: Double
-        get() {
-            return wage * 0.1
-        }
+        get() = wage * .05
 }

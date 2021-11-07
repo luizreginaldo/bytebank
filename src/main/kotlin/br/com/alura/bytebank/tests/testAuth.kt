@@ -1,9 +1,9 @@
-package tests
+package br.com.alura.bytebank.tests
 
-import models.Customer
-import models.Director
-import models.Intranet
-import models.Manager
+import br.com.alura.bytebank.models.Customer
+import br.com.alura.bytebank.models.Director
+import br.com.alura.bytebank.models.Intranet
+import br.com.alura.bytebank.models.Manager
 
 fun testAuth() {
     val manager = Manager(

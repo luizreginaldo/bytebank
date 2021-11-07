@@ -1,6 +1,4 @@
-package models
-
-import models.Authenticable
+package br.com.alura.bytebank.models
 
 class Customer(
     val name: String,
