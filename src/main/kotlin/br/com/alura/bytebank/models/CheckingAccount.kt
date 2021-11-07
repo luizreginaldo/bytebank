@@ -1,7 +1,7 @@
 package br.com.alura.bytebank.models
 
 class CheckingAccount(
-    holder: String,
+    holder: Customer,
     number: Int
 ) : BankAccount(
     holder = holder,

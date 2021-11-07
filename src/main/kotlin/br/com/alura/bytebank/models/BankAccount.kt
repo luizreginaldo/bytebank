@@ -1,7 +1,7 @@
 package br.com.alura.bytebank.models
 
 abstract class BankAccount(
-    var holder: String,
+    var holder: Customer,
     val number: Int
 ) {
     var balance = 0.0

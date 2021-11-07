@@ -1,5 +1,7 @@
 package br.com.alura.bytebank
 
-fun main() {
+import br.com.alura.bytebank.tests.testDifferentBankAccounts
 
+fun main() {
+    testDifferentBankAccounts()
 }
