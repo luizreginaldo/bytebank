@@ -1,8 +1,5 @@
 package br.com.alura.bytebank.models
 
-var totalBankAccounts = 0
-    private set
-
 abstract class BankAccount(
     var holder: Customer,
     val number: Int
@@ -12,11 +9,18 @@ abstract class BankAccount(
             field = if (value > 0) value else 0.0
         }
 
-    var total = 0
+    companion object {
+        var total = 0
+            private set
+
+        private fun increment() {
+            total++
+        }
+    }
 
     init {
         println("create bankAccount")
-        totalBankAccounts ++
+        increment()
     }
 
     fun deposit(amount: Double) {

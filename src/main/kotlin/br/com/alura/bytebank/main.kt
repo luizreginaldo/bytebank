@@ -1,8 +1,8 @@
 package br.com.alura.bytebank
 
+import br.com.alura.bytebank.models.BankAccount
 import br.com.alura.bytebank.models.Customer
 import br.com.alura.bytebank.models.SavingAccount
-import br.com.alura.bytebank.models.totalBankAccounts
 import br.com.alura.bytebank.tests.testDifferentBankAccounts
 
 fun main() {
@@ -12,5 +12,5 @@ fun main() {
 
     testDifferentBankAccounts()
 
-    println("Bank Account Total: $totalBankAccounts")
+    println("Bank Account Total: ${BankAccount.total}")
 }
