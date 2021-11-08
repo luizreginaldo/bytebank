@@ -1,29 +1,12 @@
 package br.com.alura.bytebank
 
-import br.com.alura.bytebank.exceptions.NonSufficientFundsException
-import br.com.alura.bytebank.tests.testBankAccountFunctions
+import br.com.alura.bytebank.models.Address
 
 fun main() {
-    println("start main")
-    testBankAccountFunctions()
-    println("end main")
-}
+    val address: Address? = null
+    println(address?.address?.length)
 
-fun function1() {
-    println("start function 1")
-    try {
-        function2()
-    } catch (e: NonSufficientFundsException) {
-        e.printStackTrace()
-        println("NonSufficientFundsException")
+    address?.let { address: Address ->
+        println(address.address.length)
     }
-    println("end function 1")
-}
-
-fun function2() {
-    println("start function 2")
-    for (i in 1..5) {
-        println(i)
-    }
-    println("end function 2")
 }
