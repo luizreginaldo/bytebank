@@ -13,6 +13,10 @@ fun function1() {
     try {
         function2()
     } catch (e: ClassCastException) {
+        println(e.message)
+        println(e.stackTrace)
+        println(e.cause)
+        e.printStackTrace()
         println("ClassCastException")
     }
     println("end function 1")
