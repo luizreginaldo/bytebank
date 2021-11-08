@@ -10,7 +10,11 @@ fun main() {
 
 fun function1() {
     println("start function 1")
-    function2()
+    try {
+        function2()
+    } catch (e: ClassCastException) {
+        println("ClassCastException")
+    }
     println("end function 1")
 }
 
@@ -18,7 +22,6 @@ fun function2() {
     println("start function 2")
     for (i in 1..5) {
         println(i)
-
         val address = Any()
         address as Address
     }
