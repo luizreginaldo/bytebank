@@ -1,14 +1,22 @@
 package br.com.alura.bytebank
 
-import br.com.alura.bytebank.models.Address
-
 fun main() {
-    val address = Address(address = "Rua Cinco", zipCode = "123456")
-    val newAddress = Address(address = "Rua Cinco", zipCode = "123456")
+    println("start main")
+    function1()
+    println("end main")
+}
 
-    println(address.hashCode())
-    println(newAddress.hashCode())
+fun function1() {
+    println("start function 1")
+    function2()
+    println("end function 1")
+}
 
-//    println(address)
+fun function2() {
+    println("start function 2")
+    for (i in 1..5) {
+        println(i)
+    }
+    println("end function 2")
 }
 
