@@ -1,5 +1,7 @@
 package br.com.alura.bytebank.models
 
+import br.com.alura.bytebank.exceptions.NonSufficientFundsException
+
 abstract class BankAccount(
     var holder: Customer,
     val number: Int
@@ -29,13 +31,13 @@ abstract class BankAccount(
 
     abstract fun withdraw(amount: Double): Boolean
 
-    fun transferTo(bankAccount: BankAccount, amount: Double): Boolean {
-        if (withdraw(amount)) {
-            bankAccount.deposit(amount)
-
-            return true
+    fun transferTo(bankAccount: BankAccount, amount: Double) {
+        if (balance < amount) {
+            throw NonSufficientFundsException()
         }
 
-        return false
+        if (withdraw(amount)) {
+            bankAccount.deposit(amount)
+        }
     }
 }
