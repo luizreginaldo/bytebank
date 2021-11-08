@@ -56,13 +56,13 @@ fun testDifferentBankAccounts() {
     println("Checking Account Balance: ${checkingAccount.balance}")
     println("Saving Account Balance: ${savingAccount.balance}")
 
-    checkingAccount.transferTo(savingAccount, 100.0)
+    checkingAccount.transferTo(savingAccount, 100.0, 1)
 
     println()
     println("Checking Account Balance: ${checkingAccount.balance}")
     println("Saving Account Balance: ${savingAccount.balance}")
 
-    savingAccount.transferTo(checkingAccount, 100.0)
+    savingAccount.transferTo(checkingAccount, 100.0, 1)
 
     println()
     println("Checking Account Balance: ${checkingAccount.balance}")
