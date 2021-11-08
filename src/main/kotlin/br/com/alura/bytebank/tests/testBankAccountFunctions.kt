@@ -26,11 +26,13 @@ fun testBankAccountFunctions() {
     println("bankAccountB ${bankAccountB.balance}")
 
     try {
-        bankAccountA.transferTo(bankAccountB, 50.0, 654321)
+        bankAccountA.transferTo(bankAccountB, 50.0, 123456)
         println("Success Transfer")
     } catch (e: NonSufficientFundsException) {
         e.printStackTrace()
     } catch (e: AuthFailException) {
+        e.printStackTrace()
+    } catch (e: Exception) {
         e.printStackTrace()
     }
 
