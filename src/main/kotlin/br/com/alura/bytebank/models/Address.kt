@@ -50,5 +50,13 @@ class Address(
         return result
     }
 
+    fun fullAddress() : String {
+        return """
+            $address - $number, $neighborhood, $city - $state
+            $zipCode
+            $complement
+        """.trimIndent()
+    }
+
 
 }

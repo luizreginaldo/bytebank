@@ -22,7 +22,6 @@ abstract class BankAccount(
     }
 
     init {
-        println("create bankAccount")
         increment()
     }
 
